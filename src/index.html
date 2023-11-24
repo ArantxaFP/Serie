@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Trabajo sobre la serie Está bien no estar bien">
+    <meta name="description" content="Trabajo sobre la serie Está bien no estar bien">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>It's Okay Not to Be Okay</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
@@ -20,14 +19,18 @@
 
     <!-- Portada -->
     <section id="portada">
-        <h1>Bienvenido a la web de la serie "Está bien no estar bien"</h1>
+        <h1>Web dedicada a la serie <br />"Está bien no estar bien"</h1>
         <p>Explora el fascinante mundo de la serie surcoreana a través de esta página web.</p>
         <nav>
             <ul>
-                <li><a href="pages/categoria.html">Categoría</a></li>
-                <li><a href="pages/detalle.html">Detalle</a></li>
-                <li><a href="pages/presentacion.html">Presentación</a></li>
-                <li><a href="pages/enlaces.html">Enlaces</a></li>
+                <li class="has-submenu">
+                    <a href="categoria.html">Categoría</a>
+                    <ul class="submenu">
+                        <li><a href="detalle.html">Detalle</a></li>
+                    </ul>
+                </li>
+                <li><a href="presentacion.html">Presentación</a></li>
+                <li><a href="enlaces.html">Enlaces</a></li>
             </ul>
         </nav>
     </section>
@@ -35,21 +38,50 @@
     <!-- Contenido principal de la portada -->
 
     <main id="main">
-        <div class="hero-image">
+        <!-- <div class="hero-image"> -->
+        <!-- </div> -->
 
-
+        <div class="contenedor-texto-presentacion">
+            <p>Conoce la historia de un empleado de una sala psiquiátrica y una mujer con un trastorno de personalidad
+                antisocial</p>
         </div>
+
+        <div id="contenedor-texto-mariposa">
+            <img id="mariposa" src="img/butterfly-animation-97.gif" alt="Mariposa Voladora">
+        </div>
+
+
+
+        <div class="contenedor-texto-resumen">
+            <p>Una historia sobre un empleado de una sala psiquiátrica y una mujer, con un trastorno de personalidad
+                antisocial, que es una escritora popular de libros infantiles. Un hombre que niega el amor y una mujer
+                que no conoce el amor desafían el destino y se enamoran, encontrando sus almas e identidades en el
+                proceso.</p>
+            <p>Moon Kang Tae trabaja en la sala de psiquiatría, es un hombre que fue bendecido con todo, incluido un
+                gran cuerpo, inteligencia, capacidad de simpatizar con los demás, paciencia, capacidad de reaccionar
+                rápidamente, resistencia y más. Tiene un hermano que muestra síntomas de autismo y es ocho años mayor
+                que él.
+                Su trabajo es escribir las condiciones de los pacientes y hacer frente a situaciones inesperadas, como
+                si los pacientes pelean o huyen. Solo gana alrededor de 1.8 millones de wones (~ $ 1,600 USD) por mes.
+                Por otro lado ella es una popular escritora de literatura infantil, pero es extremadamente egoísta,
+                arrogante y grosera. </p>
+        </div>
+
+
+
     </main>
 
+    <div class="espai"></div>
 
-
+ <!-- Línea separadora por encima del footer -->
+ <div class="separator-line"></div>
 
 
     <footer class="footer">
         <div class="container">
             <div>
                 <ul class="legals">
-                    <li><a href="">Aviso legal</a></li>
+                    <a href="">Aviso legal</a>
                 </ul>
 
             </div>
@@ -58,17 +90,22 @@
                 <p>Actividad realizada para la UOC</p>
             </div>
         </div>
+
+<!-- Botón para ir a la parte superior -->
+<a href="#" id="btn-scroll-top">Ir arriba</a>
+
     </footer>
 
 
 
-
-
-
     <!-- Script de JavaScript -->
-    <script type="text/javascript" src="./js/scripts.js" charset="UTF-8"></script>
+    <script src="js/main.js"></script>
 
 </body>
+
+
+
+
 
 
 </html>
