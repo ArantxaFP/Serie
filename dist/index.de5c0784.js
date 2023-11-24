@@ -1,44 +1,3 @@
-// Función para el Slider de imágenes
-document.addEventListener("DOMContentLoaded", function() {
-    const slider = document.querySelector(".slider");
-    let isDragging = false;
-    let startPos = 0;
-    let currentTranslate = 0;
-    let prevTranslate = 0;
-    slider.addEventListener("mousedown", dragStart);
-    slider.addEventListener("touchstart", dragStart);
-    slider.addEventListener("mouseup", dragEnd);
-    slider.addEventListener("touchend", dragEnd);
-    slider.addEventListener("mousemove", drag);
-    slider.addEventListener("touchmove", drag);
-    function dragStart(e) {
-        startPos = getPosition(e);
-        isDragging = true;
-        requestAnimationFrame(updateSlider);
-    }
-    function drag(e) {
-        if (isDragging) {
-            const currentPosition = getPosition(e);
-            currentTranslate = prevTranslate + currentPosition - startPos;
-        }
-    }
-    function dragEnd() {
-        isDragging = false;
-        prevTranslate = currentTranslate;
-    }
-    function getPosition(e) {
-        return e.type.includes("mouse") ? e.clientX : e.touches[0].clientX;
-    }
-    function updateSlider() {
-        if (isDragging) {
-            setSliderPosition();
-            requestAnimationFrame(updateSlider);
-        }
-    }
-    function setSliderPosition() {
-        slider.style.transform = `translateX(${currentTranslate}px)`;
-    }
-});
 // JavaScript para la animación del corazón
 const corazon = document.getElementById("corazon");
 function volar() {
@@ -47,7 +6,7 @@ function volar() {
     let angle = 0; // Ángulo inicial
     const radio = 50; // Radio de la órbita, ajusta según sea necesario
     function animar() {
-        angle += 0.01; // Ajusta este valor para cambiar la velocidad de rotación
+        angle += 0.01; // Velocidad de rotación
         const offsetX = Math.sin(angle) * radio;
         const offsetY = Math.cos(angle) * radio;
         x = 50 + offsetX;
